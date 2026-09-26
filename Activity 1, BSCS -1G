@@ -1,0 +1,113 @@
+ACTIVITY 1 – Answer
+
+Name: Ralph Lawrenz F. Montero
+
+1. Algorithm to Find the Largest of Three Numbers
+
+ALGORITHM:
+
+1. Start
+2. Enter three numbers.
+3. Check if the first number is bigger than the second and third number.
+4. If yes, the first number is the largest.
+5. If no, check if the second number is bigger than the first and third number.
+6. If yes, the second number is the largest.
+7. If both are not the largest, the third number is the largest.
+8. Show the largest number.
+9. End.
+
+EXPLANATION:
+
+An algorithm is a list of steps that helps us solve a problem. In this activity, we need to find the largest number from three numbers.
+
+First, we enter three numbers. The program compares the numbers using `if` and `else if`. It checks which number is bigger than the other two. After checking, the program displays the largest number.
+
+---
+
+2. C# Guessing Game Program
+
+CODE:
+
+csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random random = new Random();
+
+        int secretNumber = random.Next(1, 101);
+        int guess = 0;
+        int attempts = 0;
+
+        Console.WriteLine("Guess the number from 1 to 100");
+
+        while (guess != secretNumber)
+        {
+            Console.Write("Enter your guess: ");
+            guess = Convert.ToInt32(Console.ReadLine());
+
+            attempts++;
+
+            if (guess < secretNumber)
+            {
+                Console.WriteLine("Too low!");
+            }
+            else if (guess > secretNumber)
+            {
+                Console.WriteLine("Too high!");
+            }
+            else
+            {
+                Console.WriteLine("Correct!");
+                Console.WriteLine("You got it in " + attempts + " tries.");
+            }
+        }
+    }
+}
+```
+
+SIMPLE EXPLANATION:
+
+- using System;
+  This allows us to use basic C# commands like `Console`.
+
+- class Program
+  This is where we put our program.
+
+- static void Main()
+  This is where the program starts.
+
+- Random random = new Random();
+  This creates a random number generator.
+
+- int secretNumber = random.Next(1, 101);
+  This creates a random number from 1 to 100.
+
+- int guess = 0;
+  This stores the number that the user will guess.
+
+- int attempts = 0;
+  This counts how many times the user guesses.
+
+- while (guess != secretNumber)
+  This makes the program continue until the user gets the correct number.
+
+- Console.Write()
+  This displays a message and lets the user type their answer.
+
+- Convert.ToInt32(Console.ReadLine())
+  This gets the user's input and changes it into a number.
+
+- attempts++;
+  This adds 1 to the number of attempts.
+
+-`if (guess < secretNumber)
+  Checks if the guess is lower than the secret number.
+
+- else if (guess > secretNumber)
+  Checks if the guess is higher than the secret number.
+
+- else 
+  This means the guess is correct.
